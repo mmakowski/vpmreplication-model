@@ -23,10 +23,15 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.vpm.model.preprocessing.scandariato
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.scandariato
 
 import java.io.Serializable
 import java.util.*
 
+/**
+ * Data class representing the text mining of a files (Bag of words) as introduce by Scandariato et al.
+ *
+ * @param mapOfWord map containing each word of a file and their frequency
+ */
 data class TextMining(val mapOfWord: Map<String, Int> = HashMap()) : Serializable {
 }

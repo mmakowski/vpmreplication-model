@@ -23,9 +23,15 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.vpm.model.preprocessing.williams
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.williams
 
 import java.io.Serializable
 
-
+/**
+ * Data class gathering all of Shin et al. metrics of choice for a file
+ *
+ * @param complexityMetrics
+ * @param deltaHistory
+ * @param developerHistory
+ */
 data class WilliamsMetrics (val complexityMetrics: ComplexityMetrics,val deltaHistory: DeltaHistory,val developerHistory: DeveloperHistory) : Serializable
