@@ -15,7 +15,7 @@ This maven module represents the model that will be used in all other modules of
    
 ### Tests 
 
-This module contains test only for the ResultScore as all the other class are not providing any additional method.
+This module contains test only for the ResultScore class as all the other class are not providing any additional method.
 
 ### Note
 
