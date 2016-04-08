@@ -23,25 +23,15 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.williams
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.williams
 
 import java.io.Serializable
 
 /**
- * Delta History Data class
+ * Data class gathering all of Shin et al. metrics of choice for a file
  *
- * Class representing the delta history of a file
- *
- * @property linesAdded number of lines that were added
- * @property linesDeleted number of lines that were deleted
- * @property linesModified number of lines that where modified
- *
- * @author Matthieu Jimenez
+ * @param complexityMetrics
+ * @param deltaHistory
+ * @param developerHistory
  */
-data class DeltaHistory(var linesAdded: Int = 0, var linesDeleted: Int = 0, var linesModified: Int = 0) : Serializable {
-    fun sum(delta: DeltaHistory) {
-        this.linesAdded += delta.linesAdded
-        this.linesDeleted += delta.linesDeleted
-        this.linesModified += delta.linesModified
-    }
-}
+data class WilliamsMetrics (val complexityMetrics: ComplexityMetrics,val deltaHistory: DeltaHistory,val developerHistory: DeveloperHistory) : Serializable

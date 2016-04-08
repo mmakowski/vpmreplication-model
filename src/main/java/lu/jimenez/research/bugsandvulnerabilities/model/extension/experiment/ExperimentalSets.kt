@@ -34,5 +34,5 @@ import java.io.Serializable
  * @property trainingset list of element included in the training set (the int is the hash of the element)
  * @property testingset list of element included in the testing set
  */
-data class Experiment(val trainingset : List<Int>, val testingset : List<Int>) :Serializable {
+data class ExperimentalSets(val trainingset : List<Int>, val testingset : List<Int>) :Serializable {
 }

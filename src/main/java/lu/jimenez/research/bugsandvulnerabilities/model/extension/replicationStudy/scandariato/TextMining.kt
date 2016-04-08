@@ -23,15 +23,15 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.neuhaus
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.scandariato
 
 import java.io.Serializable
+import java.util.*
 
 /**
- * Data class used to represent data preprocessed for Neuhau et Al. experiment
- * Include and function calls
+ * Data class representing the text mining of a files (Bag of words) as introduce by Scandariato et al.
  *
- * @param listOfInclude list of the include of a file
- * @param mapOfCalls map of the function calls present in a file and the number of times they were called
+ * @param mapOfWord map containing each word of a file and their frequency
  */
-data class IncludeAndCalls(val listOfInclude : List<String>, val mapOfCalls: Map<String,Int>) :Serializable
+data class TextMining(val mapOfWord: Map<String, Int> = HashMap()) : Serializable {
+}

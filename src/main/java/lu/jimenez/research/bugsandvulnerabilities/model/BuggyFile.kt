@@ -36,9 +36,9 @@ import java.io.Serializable
  *
  * @property buggyFile the bugged *[file][Document]*
  * @property patchedFile the patched *[file][Document]*
- * @property bugzillaLink link to the bugzilla report
+ * @property bugReportLink link to the bugzilla report
  * @property fullCommitMessage content of the Commit message
  *
  * @author Matthieu Jimenez
  */
-data class BuggyFile(val buggyFile: Document, val patchedFile: Document, val bugzillaLink: String, val fullCommitMessage: String) : Serializable
+data class BuggyFile(val buggyFile: Document, val patchedFile: Document, val bugReportLink: String, val fullCommitMessage: String) : Serializable

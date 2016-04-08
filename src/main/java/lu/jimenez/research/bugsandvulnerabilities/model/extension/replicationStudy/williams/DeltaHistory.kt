@@ -23,15 +23,25 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.scandariato
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.williams
 
 import java.io.Serializable
-import java.util.*
 
 /**
- * Data class representing the text mining of a files (Bag of words) as introduce by Scandariato et al.
+ * Delta History Data class
  *
- * @param mapOfWord map containing each word of a file and their frequency
+ * Class representing the delta history of a file
+ *
+ * @property linesAdded number of lines that were added
+ * @property linesDeleted number of lines that were deleted
+ * @property linesModified number of lines that where modified
+ *
+ * @author Matthieu Jimenez
  */
-data class TextMining(val mapOfWord: Map<String, Int> = HashMap()) : Serializable {
+data class DeltaHistory(var linesAdded: Int = 0, var linesDeleted: Int = 0, var linesModified: Int = 0) : Serializable {
+    fun sum(delta: DeltaHistory) {
+        this.linesAdded += delta.linesAdded
+        this.linesDeleted += delta.linesDeleted
+        this.linesModified += delta.linesModified
+    }
 }

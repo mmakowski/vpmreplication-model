@@ -23,7 +23,7 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.williams
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.williams
 
 import java.io.Serializable
 

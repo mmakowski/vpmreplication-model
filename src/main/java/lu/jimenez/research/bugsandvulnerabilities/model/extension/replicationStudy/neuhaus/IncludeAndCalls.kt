@@ -23,15 +23,15 @@
 //    Author: Matthieu Jimenez – SnT – matthieu.jimenez@uni.lu
 //
 //////////////////////////////////////////////////////////////////////////////////////////
-package lu.jimenez.research.bugsandvulnerabilities.model.extension.preprocessing.williams
+package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.neuhaus
 
 import java.io.Serializable
 
 /**
- * Data class gathering all of Shin et al. metrics of choice for a file
+ * Data class used to represent data preprocessed for Neuhau et Al. experiment
+ * Include and function calls
  *
- * @param complexityMetrics
- * @param deltaHistory
- * @param developerHistory
+ * @param listOfInclude list of the include of a file
+ * @param mapOfCalls map of the function calls present in a file and the number of times they were called
  */
-data class WilliamsMetrics (val complexityMetrics: ComplexityMetrics,val deltaHistory: DeltaHistory,val developerHistory: DeveloperHistory) : Serializable
+data class IncludeAndCalls(val listOfInclude : List<String>, val mapOfCalls: Map<String,Int>) :Serializable
