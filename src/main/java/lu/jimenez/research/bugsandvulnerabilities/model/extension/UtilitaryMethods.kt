@@ -78,14 +78,14 @@ object UtilitaryMethods {
      *
      * @param listVuln list of vulnerable file
      *
-     * @return list of hash
+     * @return set of hash
      */
-    fun listOfCommitPatchVulnerability(listVuln: List<VulnerableFile>): List<String> {
-        val listCommit = ArrayList<String>()
+    fun setOfCommitPatchVulnerability(listVuln: List<VulnerableFile>): Set<String> {
+        val setCommit = mutableSetOf<String>()
         for (vuln in listVuln) {
-            listCommit.add(vuln.patchedFile.commitHash)
+            setCommit.add(vuln.patchedFile.commitHash)
         }
-        return listCommit
+        return setCommit
     }
 }
  

@@ -10,12 +10,14 @@ This maven module represents the model that will be used in all other modules of
 
  + Base class (Buggy File, Vulnerability File, File)
  + Extensions (for experiments)
-    + model for preprocessing the different approaches
-    + model for experiments and results
+    + model for experiments
+    + model for the approach of replication study
+    + Utilitary Methods
+    
    
 ### Tests 
 
-This module contains test only for the ResultScore class as all the other class are not providing any additional method.
+This module contains test only for ResultScore and UtilitaryMethods as all the other class are just basic data class.
 
 ### Note
 
