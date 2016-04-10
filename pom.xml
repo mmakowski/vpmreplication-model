@@ -21,6 +21,11 @@
             <artifactId>spek</artifactId>
             <version>${spek.version}</version>
         </dependency>
+        <dependency>
+            <groupId>lu.jimenez.research</groupId>
+            <artifactId>bugsandvulnerabilities-utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <properties>

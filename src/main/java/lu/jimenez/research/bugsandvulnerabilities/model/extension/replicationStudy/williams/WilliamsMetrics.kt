@@ -25,6 +25,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.williams
 
+import lu.jimenez.research.bugsandvulnerabilities.utils.DeltaHistory
+import lu.jimenez.research.bugsandvulnerabilities.utils.git.DeveloperHistory
 import java.io.Serializable
 
 /**
@@ -34,4 +36,4 @@ import java.io.Serializable
  * @param deltaHistory
  * @param developerHistory
  */
-data class WilliamsMetrics (val complexityMetrics: ComplexityMetrics,val deltaHistory: DeltaHistory,val developerHistory: DeveloperHistory) : Serializable
+data class WilliamsMetrics (val complexityMetrics: ComplexityMetrics, val deltaHistory: DeltaHistory, val developerHistory: DeveloperHistory) : Serializable
