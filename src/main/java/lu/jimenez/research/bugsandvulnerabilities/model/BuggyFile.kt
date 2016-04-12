@@ -41,4 +41,4 @@ import java.io.Serializable
  *
  * @author Matthieu Jimenez
  */
-data class BuggyFile(val buggyFile: Document, val patchedFile: Document, val bugReportLink: String, val fullCommitMessage: String) : Serializable
+data class BuggyFile(val buggyFile: Document, val patchedFile: Document, val fullCommitMessage: String,val bugReportLink: String) : Serializable

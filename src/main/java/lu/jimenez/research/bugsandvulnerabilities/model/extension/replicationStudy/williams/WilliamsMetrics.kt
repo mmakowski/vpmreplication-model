@@ -25,7 +25,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 package lu.jimenez.research.bugsandvulnerabilities.model.extension.replicationStudy.williams
 
-import lu.jimenez.research.bugsandvulnerabilities.utils.DeltaHistory
+import lu.jimenez.research.bugsandvulnerabilities.utils.diff.DeltaHistory
 import lu.jimenez.research.bugsandvulnerabilities.utils.git.DeveloperHistory
 import java.io.Serializable
 

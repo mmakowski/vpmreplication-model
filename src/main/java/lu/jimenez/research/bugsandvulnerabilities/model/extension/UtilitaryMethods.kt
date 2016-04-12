@@ -78,14 +78,16 @@ object UtilitaryMethods {
      *
      * @param listVuln list of vulnerable file
      *
-     * @return set of hash
+     * @return map of Hash and the number of times they occur
      */
-    fun setOfCommitPatchVulnerability(listVuln: List<VulnerableFile>): Set<String> {
-        val setCommit = mutableSetOf<String>()
+    fun setOfCommitPatchVulnerability(listVuln: List<VulnerableFile>): Map<String,Int> {
+        val setCommit = mutableMapOf<String,Int>()
         for (vuln in listVuln) {
-            setCommit.add(vuln.patchedFile.commitHash)
+            setCommit[vuln.patchedFile.commitHash] = (setCommit[vuln.patchedFile.commitHash] ?:0) +1
         }
         return setCommit
     }
+
+
 }
  
