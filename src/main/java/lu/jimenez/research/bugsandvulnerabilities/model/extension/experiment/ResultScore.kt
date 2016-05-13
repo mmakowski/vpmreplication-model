@@ -114,5 +114,9 @@ data class ResultScore(val fp :Int,
         return (tn.toFloat()/(tn+fp).toFloat())
     }
 
+    fun mcc():Float{
+        return (tp*tn-fp*fn).toFloat()/Math.sqrt(((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn)).toDouble()).toFloat()
+    }
+
 
 }
