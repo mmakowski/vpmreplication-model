@@ -31,70 +31,70 @@ import java.io.Serializable
 /**
  * Data class representing the result of an experiment with usual metrics
  *
- * @param fp False positives
- * @param fn False negatives
- * @param tn True negatives
- * @param tp True positives
+ * @property fp False positives
+ * @property fn False negatives
+ * @property tn True negatives
+ * @property tp True positives
  */
-data class ResultScore(val fp :Int,
-                       val fn : Int,
-                       val tn :Int,
-                       val tp : Int
-):Serializable {
+data class ResultScore(val fp: Int,
+                       val fn: Int,
+                       val tn: Int,
+                       val tp: Int
+) : Serializable {
 
     /**
      * Method returnin the total number of element in the testing set
      */
-    fun totalNumber() : Int {
-        return fp+fn+tp+tn
+    fun totalNumber(): Int {
+        return fp + fn + tp + tn
     }
 
     /**
      * Method computing the recall of an experiment
      * i.e., the number of true positive over the total of the positives
      */
-    fun recall():Float{
-        return (tp.toFloat()/(tp+fn).toFloat())
+    fun recall(): Float {
+        return (tp.toFloat() / (tp + fn).toFloat())
     }
 
     /**
      * Method computing the precision of an experiment
      * i.e., the number of true positive over the number of result declared as positive
      */
-    fun precision():Float{
-        return (tp.toFloat()/(tp+fp).toFloat())
+    fun precision(): Float {
+        return (tp.toFloat() / (tp + fp).toFloat())
     }
 
     /**
      * Method computing the fmeasure of an experiment
      * i.e., a measure of the harmonic mean of Recall and Precision
      */
-    fun fmeasure():Float{
-        return (2*precision()*recall())/(precision()+recall())
+    fun fmeasure(): Float {
+        return (2 * precision() * recall()) / (precision() + recall())
     }
 
     /**
      * Method computing the elusion of an experiment
      * i.e., the number of positive that were not found over the total of declared as negative
      */
-    fun elusion():Float{
-        return (fn.toFloat()/(fn+tn).toFloat())
+    fun elusion(): Float {
+        return (fn.toFloat() / (fn + tn).toFloat())
     }
 
     /**
      * Method computing the fallout of an experiment
      * i.e., number of declared wrongly as positive over the total of negative
      */
-    fun fallout():Float{
-        return (fp.toFloat()/(tn+fp).toFloat())
+    fun fallout(): Float {
+        return (fp.toFloat() / (tn + fp).toFloat())
     }
 
     /**
      * Method computing the accuracy of an experiment
      * i.e., number of correctly classify overall
      */
-    fun accuracy():Float{
-        return ((tp+tn).toFloat()/(tp+tn+fp+fn).toFloat())
+    fun accuracy(): Float {
+        return ((tp + tn).toFloat() / (tp + tn + fp + fn).toFloat())
     }
 
     /**
@@ -102,20 +102,26 @@ data class ResultScore(val fp :Int,
      * i.e., the number of elements to find as positive overall
      * this can be computed before laaunching the experiment in fact
      */
-    fun prevalence():Float{
-        return ((tp+fn).toFloat()/(tp+tn+fp+fn).toFloat())
+    fun prevalence(): Float {
+        return ((tp + fn).toFloat() / (tp + tn + fp + fn).toFloat())
     }
 
     /**
      * Method computing the true Negative rate of an experiment
      * i.e., the number of correctly classify as false over the number of false
      */
-    fun trueNegativeRate():Float{
-        return (tn.toFloat()/(tn+fp).toFloat())
+    fun trueNegativeRate(): Float {
+        return (tn.toFloat() / (tn + fp).toFloat())
     }
 
-    fun mcc():Float{
-        return (tp*tn-fp*fn).toFloat()/Math.sqrt(((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn)).toDouble()).toFloat()
+    /**
+     *  Method computing the Matthews correlation coefficient,
+     *  i.e., correlation coefficient between the observed and predicted binary classifications;
+     *  it returns a value between −1 and +1. A coefficient of +1 represents a perfect prediction,
+     *  0 no better than random prediction and −1 indicates total disagreement between prediction and observation
+     */
+    fun mcc(): Float {
+        return (tp * tn - fp * fn).toFloat() / Math.sqrt(((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn)).toDouble()).toFloat()
     }
 
 

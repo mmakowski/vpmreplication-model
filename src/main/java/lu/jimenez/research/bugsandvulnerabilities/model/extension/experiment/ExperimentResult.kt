@@ -31,8 +31,8 @@ import java.io.Serializable
 /**
  * Data class representing the result of a Binary classification experiment
  *
- * @param listOfResult list of the classification obtain at the end of the experiment
- * @param result scoring of the experiment
+ * @property listOfResult list of the classification obtain at the end of the experiment
+ * @property result scoring of the experiment
  */
 data class ExperimentResult(val listOfResult: List<Boolean>, val result: ResultScore) : Serializable {
 }

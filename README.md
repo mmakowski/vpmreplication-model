@@ -21,7 +21,7 @@ This module contains test only for ResultScore and UtilitaryMethods as all the o
 
 ### Note
 
-As other part of the project, this module is coded in Kotlin 1.0.0 and use Speck as a testing framework
+As other part of the project, this module is coded in Kotlin 1.0.4 and use Speck as a testing framework
 
 Matthieu Jimenez - 2016
                                                                             

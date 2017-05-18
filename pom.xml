@@ -6,7 +6,7 @@
 
     <groupId>lu.jimenez.research</groupId>
     <artifactId>bugsandvulnerabilities-model</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
 
@@ -29,8 +29,8 @@
     </dependencies>
 
     <properties>
-        <kotlin.version>1.0.0</kotlin.version>
-        <dokka.version>0.9.4</dokka.version>
+        <kotlin.version>1.0.4</kotlin.version>
+        <dokka.version>0.9.8</dokka.version>
         <spek.version>0.1.195</spek.version>
     </properties>
 
